@@ -14,13 +14,37 @@ Lines that are not http or https URLs are skipped. Place the file at your site r
 
 A transit map: a colored route bar down the side, station-dot legends, and condensed display type, with the generated XML in a dark panel.
 
+## Why this exists
+
+Most sitemap generators either crawl your site through their own server or sit behind a signup. When you already know your URLs, all you need is the XML wrapped around them. This is one HTML file with no tracking and no network calls, released under the MIT license, so you can read all of it, host it, or fork it.
+
 ## Privacy
 
 Everything runs in your browser. Nothing you type is sent anywhere, stored, or saved. Closing the tab clears it.
 
-## Use it
+## Use
 
 Open `index.html` in any modern browser, or host it as a static page. No build step, no dependencies, no network calls.
+
+Steps:
+
+1. Paste your page URLs into Page URLs, one per line.
+2. Set Change frequency, Priority, and Last modified, or tick Use today's date for lastmod.
+3. Click Generate.
+4. Click Copy XML or Download sitemap.xml, put the file at your site root, and reference it from robots.txt.
+
+## Run locally
+
+```
+git clone https://github.com/0xelitesystem/sitemap-xml-generator
+cd sitemap-xml-generator
+```
+
+Open `index.html` in a browser, or serve the folder with `python -m http.server` and visit http://localhost:8000.
+
+## Build
+
+No build step. The whole tool is one `index.html` file.
 
 ## More
 
